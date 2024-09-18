@@ -1,0 +1,169 @@
+/* Generelle body-styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Hovedoverskrift */
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Sektioner */
+#produkt-kategorier, #produkt-liste, #kurv-indhold {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Knapper til kategorier */
+#produkt-kategorier button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#produkt-kategorier button:hover {
+    background-color: #0056b3;
+}
+
+/* Liste over produkter */
+#produkt-liste {
+    list-style-type: none;
+    padding: 0;
+}
+
+#produkt-liste li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#produkt-liste li:last-child {
+    border-bottom: none;
+}
+
+/* Produktknapper */
+#produkt-liste button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#produkt-liste button:hover {
+    background-color: #218838;
+}
+
+/* Kurv-liste */
+#kurv-indhold {
+    list-style-type: none;
+    padding: 0;
+}
+
+#kurv-indhold li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#kurv-indhold li:last-child {
+    border-bottom: none;
+}
+
+/* Knapper i kurven til at øge/mindske antallet */
+#kurv-indhold button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#kurv-indhold button:hover {
+    background-color: #c82333;
+}
+
+/* Knapper til at tilføje flere varer i kurven */
+#kurv-indhold button:last-child {
+    background-color: #28a745;
+}
+
+#kurv-indhold button:last-child:hover {
+    background-color: #218838;
+}
+
+/* Total pris styling */
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+/* Responsivt design */
+
+/* Større skærme (tablets og desktops) */
+@media (min-width: 768px) {
+    #produkt-liste li, #kurv-indhold li {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #produkt-liste li button, #kurv-indhold li button {
+        width: auto;
+        margin: 0;
+    }
+}
+
+/* Mindre skærme (mobiltelefoner) */
+@media (max-width: 767px) {
+    #produkt-kategorier, #produkt-liste, #kurv-indhold {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    #produkt-liste li, #kurv-indhold li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #produkt-liste li button, #kurv-indhold li button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* Reducer overskriftsstørrelsen på små skærme */
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
